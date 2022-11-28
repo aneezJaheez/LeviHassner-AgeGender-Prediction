@@ -1,0 +1,724 @@
+DATA:
+  BATCH_SIZE: 8
+  DATA_DIR: /export/home/aneezahm001/nndl_2/adience/adience_age_gender/
+  TARGET_LABEL: both
+LOG_DIR: /export/home/aneezahm001/nndl_2/age_gender/logs/adience/1668105030_both_celeba_pretrained
+LOG_FILE: /export/home/aneezahm001/nndl_2/age_gender/logs/adience/1668105030_both_celeba_pretrained/training.log.tsv
+MODEL:
+  DROPOUT: 0.5
+  INITIALIZER: levi_hassner
+  INPUT_SHAPE: (227, 227, 3)
+  OPTIMIZER:
+    ALPHA: 0.01
+    BETAS: (0.9, 0.999)
+    GAMMA: 0.0005
+    MOMENTUM: 0.0
+    NAME: sgd
+  PRETRAIN_PATH: /export/home/aneezahm001/nndl_2/checkpoints/celeba_age_gender
+PREFIX: val1
+RUN_SEED: 1
+TRAIN:
+  CROSS_VALIDATE: True
+  ENABLE: True
+  MAX_EPOCHS: 15
+
+Running on cross-validation fold 1==========MODEL ARCHITECTURE==========
+Model: "functional_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 227, 227, 3)]     0         
+_________________________________________________________________
+levi_hassner_backbone (LeviH (None, 512)               8855200   
+_________________________________________________________________
+multi_task_head (MultiTaskHe [(None, 8), (None, 1)]    4617      
+=================================================================
+Total params: 8,859,817
+Trainable params: 7,345,753
+Non-trainable params: 1,514,064
+_________________________________________________________________
+
+
+Training multi-task model on simultaneous age and gender recognition.
+Combined training loss at step 500: 1.6169 
+Combined training loss at step 1000: 1.7448 
+Training accuracy on task 1 over epoch 1: 0.4313 
+Training accuracy on task 2 over epoch 1: 0.7808 
+Validation accuracy on task 1 over epoch 1: 0.4390
+Validation accuracy on task 2 over epoch 1: 0.8130
+Time taken for epoch 1: 49.81s
+
+Combined training loss at step 500: 1.0391 
+Combined training loss at step 1000: 1.5638 
+Training accuracy on task 1 over epoch 2: 0.5175 
+Training accuracy on task 2 over epoch 2: 0.8448 
+Validation accuracy on task 1 over epoch 2: 0.4564
+Validation accuracy on task 2 over epoch 2: 0.8247
+Time taken for epoch 2: 45.22s
+
+Combined training loss at step 500: 1.0349 
+Combined training loss at step 1000: 1.4333 
+Training accuracy on task 1 over epoch 3: 0.5616 
+Training accuracy on task 2 over epoch 3: 0.8697 
+Validation accuracy on task 1 over epoch 3: 0.4817
+Validation accuracy on task 2 over epoch 3: 0.8228
+Time taken for epoch 3: 44.27s
+
+Combined training loss at step 500: 0.9179 
+Combined training loss at step 1000: 1.3637 
+Training accuracy on task 1 over epoch 4: 0.5987 
+Training accuracy on task 2 over epoch 4: 0.8866 
+Validation accuracy on task 1 over epoch 4: 0.4896
+Validation accuracy on task 2 over epoch 4: 0.8224
+Time taken for epoch 4: 51.80s
+
+Combined training loss at step 500: 1.3025 
+Combined training loss at step 1000: 0.9249 
+Training accuracy on task 1 over epoch 5: 0.6349 
+Training accuracy on task 2 over epoch 5: 0.9026 
+Validation accuracy on task 1 over epoch 5: 0.5002
+Validation accuracy on task 2 over epoch 5: 0.8190
+Time taken for epoch 5: 45.96s
+
+Combined training loss at step 500: 1.0956 
+Combined training loss at step 1000: 0.9733 
+Training accuracy on task 1 over epoch 6: 0.6647 
+Training accuracy on task 2 over epoch 6: 0.9147 
+Validation accuracy on task 1 over epoch 6: 0.5134
+Validation accuracy on task 2 over epoch 6: 0.8187
+Time taken for epoch 6: 45.01s
+
+Combined training loss at step 500: 0.7926 
+Combined training loss at step 1000: 0.8485 
+Training accuracy on task 1 over epoch 7: 0.6878 
+Training accuracy on task 2 over epoch 7: 0.9248 
+Validation accuracy on task 1 over epoch 7: 0.4994
+Validation accuracy on task 2 over epoch 7: 0.8315
+Time taken for epoch 7: 45.92s
+
+Combined training loss at step 500: 0.4672 
+Combined training loss at step 1000: 0.7043 
+Training accuracy on task 1 over epoch 8: 0.7123 
+Training accuracy on task 2 over epoch 8: 0.9343 
+Validation accuracy on task 1 over epoch 8: 0.4998
+Validation accuracy on task 2 over epoch 8: 0.8353
+Time taken for epoch 8: 45.70s
+
+Combined training loss at step 500: 0.7174 
+Combined training loss at step 1000: 0.5075 
+Training accuracy on task 1 over epoch 9: 0.7399 
+Training accuracy on task 2 over epoch 9: 0.9400 
+Validation accuracy on task 1 over epoch 9: 0.5062
+Validation accuracy on task 2 over epoch 9: 0.8156
+Time taken for epoch 9: 45.94s
+
+Combined training loss at step 500: 0.5369 
+Combined training loss at step 1000: 0.6793 
+Training accuracy on task 1 over epoch 10: 0.7589 
+Training accuracy on task 2 over epoch 10: 0.9454 
+Validation accuracy on task 1 over epoch 10: 0.5077
+Validation accuracy on task 2 over epoch 10: 0.8334
+Time taken for epoch 10: 44.79s
+
+Combined training loss at step 500: 0.9337 
+Combined training loss at step 1000: 0.5117 
+Training accuracy on task 1 over epoch 11: 0.7882 
+Training accuracy on task 2 over epoch 11: 0.9480 
+Validation accuracy on task 1 over epoch 11: 0.5168
+Validation accuracy on task 2 over epoch 11: 0.8360
+Time taken for epoch 11: 45.07s
+
+Combined training loss at step 500: 0.1702 
+Combined training loss at step 1000: 0.5503 
+Training accuracy on task 1 over epoch 12: 0.8020 
+Training accuracy on task 2 over epoch 12: 0.9560 
+Validation accuracy on task 1 over epoch 12: 0.5229
+Validation accuracy on task 2 over epoch 12: 0.8145
+Time taken for epoch 12: 45.65s
+
+Combined training loss at step 500: 0.5422 
+Combined training loss at step 1000: 0.4978 
+Training accuracy on task 1 over epoch 13: 0.8187 
+Training accuracy on task 2 over epoch 13: 0.9552 
+Validation accuracy on task 1 over epoch 13: 0.5195
+Validation accuracy on task 2 over epoch 13: 0.8406
+Time taken for epoch 13: 44.97s
+
+Combined training loss at step 500: 0.3092 
+Combined training loss at step 1000: 0.3154 
+Training accuracy on task 1 over epoch 14: 0.8314 
+Training accuracy on task 2 over epoch 14: 0.9638 
+Validation accuracy on task 1 over epoch 14: 0.5017
+Validation accuracy on task 2 over epoch 14: 0.8168
+Time taken for epoch 14: 45.21s
+
+Combined training loss at step 500: 0.1750 
+Combined training loss at step 1000: 0.5824 
+Training accuracy on task 1 over epoch 15: 0.8526 
+Training accuracy on task 2 over epoch 15: 0.9651 
+Validation accuracy on task 1 over epoch 15: 0.4994
+Validation accuracy on task 2 over epoch 15: 0.8292
+Time taken for epoch 15: 46.09s
+
+Mean accuracies = [0.51945597 0.84057426]
+
+Running on cross-validation fold 2==========MODEL ARCHITECTURE==========
+Model: "functional_3"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         [(None, 227, 227, 3)]     0         
+_________________________________________________________________
+levi_hassner_backbone_1 (Lev (None, 512)               8855200   
+_________________________________________________________________
+multi_task_head_1 (MultiTask [(None, 8), (None, 1)]    4617      
+=================================================================
+Total params: 8,859,817
+Trainable params: 7,345,753
+Non-trainable params: 1,514,064
+_________________________________________________________________
+
+
+Training multi-task model on simultaneous age and gender recognition.
+Combined training loss at step 500: 1.5095 
+Combined training loss at step 1000: 1.5935 
+Training accuracy on task 1 over epoch 1: 0.4314 
+Training accuracy on task 2 over epoch 1: 0.7732 
+Validation accuracy on task 1 over epoch 1: 0.4398
+Validation accuracy on task 2 over epoch 1: 0.8682
+Time taken for epoch 1: 46.28s
+
+Combined training loss at step 500: 1.2038 
+Combined training loss at step 1000: 1.3348 
+Training accuracy on task 1 over epoch 2: 0.5193 
+Training accuracy on task 2 over epoch 2: 0.8347 
+Validation accuracy on task 1 over epoch 2: 0.4385
+Validation accuracy on task 2 over epoch 2: 0.8720
+Time taken for epoch 2: 45.87s
+
+Combined training loss at step 500: 1.5169 
+Combined training loss at step 1000: 1.2137 
+Training accuracy on task 1 over epoch 3: 0.5631 
+Training accuracy on task 2 over epoch 3: 0.8658 
+Validation accuracy on task 1 over epoch 3: 0.4597
+Validation accuracy on task 2 over epoch 3: 0.8716
+Time taken for epoch 3: 48.46s
+
+Combined training loss at step 500: 1.3291 
+Combined training loss at step 1000: 0.8515 
+Training accuracy on task 1 over epoch 4: 0.5988 
+Training accuracy on task 2 over epoch 4: 0.8844 
+Validation accuracy on task 1 over epoch 4: 0.4757
+Validation accuracy on task 2 over epoch 4: 0.8792
+Time taken for epoch 4: 46.19s
+
+Combined training loss at step 500: 1.0356 
+Combined training loss at step 1000: 0.7424 
+Training accuracy on task 1 over epoch 5: 0.6267 
+Training accuracy on task 2 over epoch 5: 0.9003 
+Validation accuracy on task 1 over epoch 5: 0.4677
+Validation accuracy on task 2 over epoch 5: 0.8792
+Time taken for epoch 5: 46.29s
+
+Combined training loss at step 500: 1.4912 
+Combined training loss at step 1000: 0.7308 
+Training accuracy on task 1 over epoch 6: 0.6584 
+Training accuracy on task 2 over epoch 6: 0.9125 
+Validation accuracy on task 1 over epoch 6: 0.4618
+Validation accuracy on task 2 over epoch 6: 0.8821
+Time taken for epoch 6: 45.32s
+
+Combined training loss at step 500: 1.1434 
+Combined training loss at step 1000: 0.8182 
+Training accuracy on task 1 over epoch 7: 0.6890 
+Training accuracy on task 2 over epoch 7: 0.9228 
+Validation accuracy on task 1 over epoch 7: 0.4487
+Validation accuracy on task 2 over epoch 7: 0.8741
+Time taken for epoch 7: 45.05s
+
+Combined training loss at step 500: 1.2386 
+Combined training loss at step 1000: 0.4756 
+Training accuracy on task 1 over epoch 8: 0.7183 
+Training accuracy on task 2 over epoch 8: 0.9327 
+Validation accuracy on task 1 over epoch 8: 0.4347
+Validation accuracy on task 2 over epoch 8: 0.8513
+Time taken for epoch 8: 45.41s
+
+Combined training loss at step 500: 1.0993 
+Combined training loss at step 1000: 0.2979 
+Training accuracy on task 1 over epoch 9: 0.7357 
+Training accuracy on task 2 over epoch 9: 0.9363 
+Validation accuracy on task 1 over epoch 9: 0.4546
+Validation accuracy on task 2 over epoch 9: 0.8821
+Time taken for epoch 9: 45.66s
+
+Combined training loss at step 500: 0.4700 
+Combined training loss at step 1000: 0.6135 
+Training accuracy on task 1 over epoch 10: 0.7664 
+Training accuracy on task 2 over epoch 10: 0.9405 
+Validation accuracy on task 1 over epoch 10: 0.4423
+Validation accuracy on task 2 over epoch 10: 0.8724
+Time taken for epoch 10: 44.87s
+
+Combined training loss at step 500: 0.8320 
+Combined training loss at step 1000: 0.6586 
+Training accuracy on task 1 over epoch 11: 0.7826 
+Training accuracy on task 2 over epoch 11: 0.9523 
+Validation accuracy on task 1 over epoch 11: 0.4563
+Validation accuracy on task 2 over epoch 11: 0.8758
+Time taken for epoch 11: 47.73s
+
+Combined training loss at step 500: 0.4467 
+Combined training loss at step 1000: 0.3498 
+Training accuracy on task 1 over epoch 12: 0.8053 
+Training accuracy on task 2 over epoch 12: 0.9508 
+Validation accuracy on task 1 over epoch 12: 0.4643
+Validation accuracy on task 2 over epoch 12: 0.8766
+Time taken for epoch 12: 45.23s
+
+Combined training loss at step 500: 0.3504 
+Combined training loss at step 1000: 0.6073 
+Training accuracy on task 1 over epoch 13: 0.8191 
+Training accuracy on task 2 over epoch 13: 0.9563 
+Validation accuracy on task 1 over epoch 13: 0.4377
+Validation accuracy on task 2 over epoch 13: 0.8796
+Time taken for epoch 13: 45.64s
+
+Combined training loss at step 500: 0.4175 
+Combined training loss at step 1000: 0.3861 
+Training accuracy on task 1 over epoch 14: 0.8410 
+Training accuracy on task 2 over epoch 14: 0.9606 
+Validation accuracy on task 1 over epoch 14: 0.4529
+Validation accuracy on task 2 over epoch 14: 0.8673
+Time taken for epoch 14: 45.82s
+
+Combined training loss at step 500: 0.2506 
+Combined training loss at step 1000: 0.9453 
+Training accuracy on task 1 over epoch 15: 0.8533 
+Training accuracy on task 2 over epoch 15: 0.9672 
+Validation accuracy on task 1 over epoch 15: 0.4609
+Validation accuracy on task 2 over epoch 15: 0.8695
+Time taken for epoch 15: 45.79s
+
+Mean accuracies = [0.4975818 0.8598731]
+
+Running on cross-validation fold 3==========MODEL ARCHITECTURE==========
+Model: "functional_5"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_3 (InputLayer)         [(None, 227, 227, 3)]     0         
+_________________________________________________________________
+levi_hassner_backbone_2 (Lev (None, 512)               8855200   
+_________________________________________________________________
+multi_task_head_2 (MultiTask [(None, 8), (None, 1)]    4617      
+=================================================================
+Total params: 8,859,817
+Trainable params: 7,345,753
+Non-trainable params: 1,514,064
+_________________________________________________________________
+
+
+Training multi-task model on simultaneous age and gender recognition.
+Combined training loss at step 500: 1.8996 
+Combined training loss at step 1000: 1.9398 
+Training accuracy on task 1 over epoch 1: 0.4317 
+Training accuracy on task 2 over epoch 1: 0.7836 
+Validation accuracy on task 1 over epoch 1: 0.4735
+Validation accuracy on task 2 over epoch 1: 0.7943
+Time taken for epoch 1: 45.22s
+
+Combined training loss at step 500: 1.2855 
+Combined training loss at step 1000: 1.7040 
+Training accuracy on task 1 over epoch 2: 0.5196 
+Training accuracy on task 2 over epoch 2: 0.8609 
+Validation accuracy on task 1 over epoch 2: 0.4463
+Validation accuracy on task 2 over epoch 2: 0.7920
+Time taken for epoch 2: 45.16s
+
+Combined training loss at step 500: 1.4095 
+Combined training loss at step 1000: 1.7417 
+Training accuracy on task 1 over epoch 3: 0.5711 
+Training accuracy on task 2 over epoch 3: 0.8804 
+Validation accuracy on task 1 over epoch 3: 0.4473
+Validation accuracy on task 2 over epoch 3: 0.7992
+Time taken for epoch 3: 45.56s
+
+Combined training loss at step 500: 1.0706 
+Combined training loss at step 1000: 1.0466 
+Training accuracy on task 1 over epoch 4: 0.6054 
+Training accuracy on task 2 over epoch 4: 0.8942 
+Validation accuracy on task 1 over epoch 4: 0.4200
+Validation accuracy on task 2 over epoch 4: 0.7940
+Time taken for epoch 4: 45.30s
+
+Combined training loss at step 500: 0.7058 
+Combined training loss at step 1000: 1.3624 
+Training accuracy on task 1 over epoch 5: 0.6398 
+Training accuracy on task 2 over epoch 5: 0.9080 
+Validation accuracy on task 1 over epoch 5: 0.4394
+Validation accuracy on task 2 over epoch 5: 0.7933
+Time taken for epoch 5: 46.93s
+
+Combined training loss at step 500: 0.7003 
+Combined training loss at step 1000: 1.0596 
+Training accuracy on task 1 over epoch 6: 0.6717 
+Training accuracy on task 2 over epoch 6: 0.9233 
+Validation accuracy on task 1 over epoch 6: 0.4519
+Validation accuracy on task 2 over epoch 6: 0.7995
+Time taken for epoch 6: 45.97s
+
+Combined training loss at step 500: 0.9599 
+Combined training loss at step 1000: 1.1039 
+Training accuracy on task 1 over epoch 7: 0.6954 
+Training accuracy on task 2 over epoch 7: 0.9271 
+Validation accuracy on task 1 over epoch 7: 0.4328
+Validation accuracy on task 2 over epoch 7: 0.8022
+Time taken for epoch 7: 45.56s
+
+Combined training loss at step 500: 0.8690 
+Combined training loss at step 1000: 0.6970 
+Training accuracy on task 1 over epoch 8: 0.7301 
+Training accuracy on task 2 over epoch 8: 0.9404 
+Validation accuracy on task 1 over epoch 8: 0.4479
+Validation accuracy on task 2 over epoch 8: 0.8114
+Time taken for epoch 8: 45.80s
+
+Combined training loss at step 500: 0.6153 
+Combined training loss at step 1000: 0.5577 
+Training accuracy on task 1 over epoch 9: 0.7564 
+Training accuracy on task 2 over epoch 9: 0.9447 
+Validation accuracy on task 1 over epoch 9: 0.4637
+Validation accuracy on task 2 over epoch 9: 0.8153
+Time taken for epoch 9: 45.69s
+
+Combined training loss at step 500: 0.5295 
+Combined training loss at step 1000: 0.3569 
+Training accuracy on task 1 over epoch 10: 0.7766 
+Training accuracy on task 2 over epoch 10: 0.9497 
+Validation accuracy on task 1 over epoch 10: 0.3983
+Validation accuracy on task 2 over epoch 10: 0.8166
+Time taken for epoch 10: 44.61s
+
+Combined training loss at step 500: 0.3600 
+Combined training loss at step 1000: 0.5414 
+Training accuracy on task 1 over epoch 11: 0.7980 
+Training accuracy on task 2 over epoch 11: 0.9509 
+Validation accuracy on task 1 over epoch 11: 0.4183
+Validation accuracy on task 2 over epoch 11: 0.8041
+Time taken for epoch 11: 45.82s
+
+Combined training loss at step 500: 0.3563 
+Combined training loss at step 1000: 0.9702 
+Training accuracy on task 1 over epoch 12: 0.8121 
+Training accuracy on task 2 over epoch 12: 0.9588 
+Validation accuracy on task 1 over epoch 12: 0.4341
+Validation accuracy on task 2 over epoch 12: 0.7979
+Time taken for epoch 12: 46.02s
+
+Combined training loss at step 500: 0.5584 
+Combined training loss at step 1000: 0.8609 
+Training accuracy on task 1 over epoch 13: 0.8309 
+Training accuracy on task 2 over epoch 13: 0.9620 
+Validation accuracy on task 1 over epoch 13: 0.4141
+Validation accuracy on task 2 over epoch 13: 0.8071
+Time taken for epoch 13: 46.29s
+
+Combined training loss at step 500: 0.2120 
+Combined training loss at step 1000: 0.6182 
+Training accuracy on task 1 over epoch 14: 0.8459 
+Training accuracy on task 2 over epoch 14: 0.9614 
+Validation accuracy on task 1 over epoch 14: 0.4660
+Validation accuracy on task 2 over epoch 14: 0.8058
+Time taken for epoch 14: 46.12s
+
+Combined training loss at step 500: 0.5241 
+Combined training loss at step 1000: 0.1776 
+Training accuracy on task 1 over epoch 15: 0.8569 
+Training accuracy on task 2 over epoch 15: 0.9672 
+Validation accuracy on task 1 over epoch 15: 0.4354
+Validation accuracy on task 2 over epoch 15: 0.7979
+Time taken for epoch 15: 46.22s
+
+Mean accuracies = [0.4895698  0.83800936]
+
+Running on cross-validation fold 4==========MODEL ARCHITECTURE==========
+Model: "functional_7"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_4 (InputLayer)         [(None, 227, 227, 3)]     0         
+_________________________________________________________________
+levi_hassner_backbone_3 (Lev (None, 512)               8855200   
+_________________________________________________________________
+multi_task_head_3 (MultiTask [(None, 8), (None, 1)]    4617      
+=================================================================
+Total params: 8,859,817
+Trainable params: 7,345,753
+Non-trainable params: 1,514,064
+_________________________________________________________________
+
+
+Training multi-task model on simultaneous age and gender recognition.
+Combined training loss at step 500: 1.7963 
+Combined training loss at step 1000: 1.4597 
+Training accuracy on task 1 over epoch 1: 0.4507 
+Training accuracy on task 2 over epoch 1: 0.7786 
+Validation accuracy on task 1 over epoch 1: 0.3859
+Validation accuracy on task 2 over epoch 1: 0.8535
+Time taken for epoch 1: 45.47s
+
+Combined training loss at step 500: 1.6342 
+Combined training loss at step 1000: 1.4190 
+Training accuracy on task 1 over epoch 2: 0.5327 
+Training accuracy on task 2 over epoch 2: 0.8407 
+Validation accuracy on task 1 over epoch 2: 0.4261
+Validation accuracy on task 2 over epoch 2: 0.8556
+Time taken for epoch 2: 45.24s
+
+Combined training loss at step 500: 1.3885 
+Combined training loss at step 1000: 0.9441 
+Training accuracy on task 1 over epoch 3: 0.5746 
+Training accuracy on task 2 over epoch 3: 0.8706 
+Validation accuracy on task 1 over epoch 3: 0.4241
+Validation accuracy on task 2 over epoch 3: 0.8643
+Time taken for epoch 3: 45.18s
+
+Combined training loss at step 500: 1.5719 
+Combined training loss at step 1000: 1.0882 
+Training accuracy on task 1 over epoch 4: 0.6088 
+Training accuracy on task 2 over epoch 4: 0.8868 
+Validation accuracy on task 1 over epoch 4: 0.4585
+Validation accuracy on task 2 over epoch 4: 0.8680
+Time taken for epoch 4: 46.87s
+
+Combined training loss at step 500: 0.9109 
+Combined training loss at step 1000: 0.9174 
+Training accuracy on task 1 over epoch 5: 0.6432 
+Training accuracy on task 2 over epoch 5: 0.9020 
+Validation accuracy on task 1 over epoch 5: 0.4465
+Validation accuracy on task 2 over epoch 5: 0.8697
+Time taken for epoch 5: 45.47s
+
+Combined training loss at step 500: 0.9117 
+Combined training loss at step 1000: 0.6823 
+Training accuracy on task 1 over epoch 6: 0.6730 
+Training accuracy on task 2 over epoch 6: 0.9103 
+Validation accuracy on task 1 over epoch 6: 0.4490
+Validation accuracy on task 2 over epoch 6: 0.8635
+Time taken for epoch 6: 45.85s
+
+Combined training loss at step 500: 1.0903 
+Combined training loss at step 1000: 0.5148 
+Training accuracy on task 1 over epoch 7: 0.7000 
+Training accuracy on task 2 over epoch 7: 0.9193 
+Validation accuracy on task 1 over epoch 7: 0.4315
+Validation accuracy on task 2 over epoch 7: 0.8494
+Time taken for epoch 7: 45.24s
+
+Combined training loss at step 500: 0.5543 
+Combined training loss at step 1000: 0.4997 
+Training accuracy on task 1 over epoch 8: 0.7323 
+Training accuracy on task 2 over epoch 8: 0.9305 
+Validation accuracy on task 1 over epoch 8: 0.4365
+Validation accuracy on task 2 over epoch 8: 0.8593
+Time taken for epoch 8: 45.39s
+
+Combined training loss at step 500: 0.6871 
+Combined training loss at step 1000: 0.6814 
+Training accuracy on task 1 over epoch 9: 0.7552 
+Training accuracy on task 2 over epoch 9: 0.9394 
+Validation accuracy on task 1 over epoch 9: 0.4477
+Validation accuracy on task 2 over epoch 9: 0.8606
+Time taken for epoch 9: 45.60s
+
+Combined training loss at step 500: 0.5821 
+Combined training loss at step 1000: 0.7165 
+Training accuracy on task 1 over epoch 10: 0.7785 
+Training accuracy on task 2 over epoch 10: 0.9410 
+Validation accuracy on task 1 over epoch 10: 0.4369
+Validation accuracy on task 2 over epoch 10: 0.8660
+Time taken for epoch 10: 47.86s
+
+Combined training loss at step 500: 0.6324 
+Combined training loss at step 1000: 0.7483 
+Training accuracy on task 1 over epoch 11: 0.7972 
+Training accuracy on task 2 over epoch 11: 0.9497 
+Validation accuracy on task 1 over epoch 11: 0.4249
+Validation accuracy on task 2 over epoch 11: 0.8274
+Time taken for epoch 11: 45.88s
+
+Combined training loss at step 500: 0.6263 
+Combined training loss at step 1000: 0.5492 
+Training accuracy on task 1 over epoch 12: 0.8248 
+Training accuracy on task 2 over epoch 12: 0.9540 
+Validation accuracy on task 1 over epoch 12: 0.4324
+Validation accuracy on task 2 over epoch 12: 0.8606
+Time taken for epoch 12: 44.92s
+
+Combined training loss at step 500: 0.2295 
+Combined training loss at step 1000: 0.2286 
+Training accuracy on task 1 over epoch 13: 0.8346 
+Training accuracy on task 2 over epoch 13: 0.9565 
+Validation accuracy on task 1 over epoch 13: 0.4452
+Validation accuracy on task 2 over epoch 13: 0.8668
+Time taken for epoch 13: 47.01s
+
+Combined training loss at step 500: 0.2691 
+Combined training loss at step 1000: 0.4312 
+Training accuracy on task 1 over epoch 14: 0.8518 
+Training accuracy on task 2 over epoch 14: 0.9644 
+Validation accuracy on task 1 over epoch 14: 0.4481
+Validation accuracy on task 2 over epoch 14: 0.8622
+Time taken for epoch 14: 48.00s
+
+Combined training loss at step 500: 0.5669 
+Combined training loss at step 1000: 0.3795 
+Training accuracy on task 1 over epoch 15: 0.8594 
+Training accuracy on task 2 over epoch 15: 0.9630 
+Validation accuracy on task 1 over epoch 15: 0.4448
+Validation accuracy on task 2 over epoch 15: 0.8598
+Time taken for epoch 15: 49.73s
+
+Mean accuracies = [0.48180392 0.8455195 ]
+
+Running on cross-validation fold 5==========MODEL ARCHITECTURE==========
+Model: "functional_9"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_5 (InputLayer)         [(None, 227, 227, 3)]     0         
+_________________________________________________________________
+levi_hassner_backbone_4 (Lev (None, 512)               8855200   
+_________________________________________________________________
+multi_task_head_4 (MultiTask [(None, 8), (None, 1)]    4617      
+=================================================================
+Total params: 8,859,817
+Trainable params: 7,345,753
+Non-trainable params: 1,514,064
+_________________________________________________________________
+
+
+Training multi-task model on simultaneous age and gender recognition.
+Combined training loss at step 500: 1.9237 
+Combined training loss at step 1000: 1.8627 
+Training accuracy on task 1 over epoch 1: 0.3971 
+Training accuracy on task 2 over epoch 1: 0.7599 
+Validation accuracy on task 1 over epoch 1: 0.4869
+Validation accuracy on task 2 over epoch 1: 0.8366
+Time taken for epoch 1: 45.99s
+
+Combined training loss at step 500: 2.3882 
+Combined training loss at step 1000: 1.7838 
+Training accuracy on task 1 over epoch 2: 0.5044 
+Training accuracy on task 2 over epoch 2: 0.8339 
+Validation accuracy on task 1 over epoch 2: 0.4798
+Validation accuracy on task 2 over epoch 2: 0.8502
+Time taken for epoch 2: 45.90s
+
+Combined training loss at step 500: 1.5796 
+Combined training loss at step 1000: 1.3260 
+Training accuracy on task 1 over epoch 3: 0.5501 
+Training accuracy on task 2 over epoch 3: 0.8688 
+Validation accuracy on task 1 over epoch 3: 0.5409
+Validation accuracy on task 2 over epoch 3: 0.8489
+Time taken for epoch 3: 47.80s
+
+Combined training loss at step 500: 1.2014 
+Combined training loss at step 1000: 1.6908 
+Training accuracy on task 1 over epoch 4: 0.5862 
+Training accuracy on task 2 over epoch 4: 0.8849 
+Validation accuracy on task 1 over epoch 4: 0.5333
+Validation accuracy on task 2 over epoch 4: 0.8467
+Time taken for epoch 4: 45.62s
+
+Combined training loss at step 500: 1.6400 
+Combined training loss at step 1000: 0.9242 
+Training accuracy on task 1 over epoch 5: 0.6214 
+Training accuracy on task 2 over epoch 5: 0.9010 
+Validation accuracy on task 1 over epoch 5: 0.5292
+Validation accuracy on task 2 over epoch 5: 0.8497
+Time taken for epoch 5: 45.75s
+
+Combined training loss at step 500: 0.9579 
+Combined training loss at step 1000: 0.9981 
+Training accuracy on task 1 over epoch 6: 0.6599 
+Training accuracy on task 2 over epoch 6: 0.9164 
+Validation accuracy on task 1 over epoch 6: 0.5172
+Validation accuracy on task 2 over epoch 6: 0.8508
+Time taken for epoch 6: 45.54s
+
+Combined training loss at step 500: 1.3741 
+Combined training loss at step 1000: 0.8287 
+Training accuracy on task 1 over epoch 7: 0.6838 
+Training accuracy on task 2 over epoch 7: 0.9250 
+Validation accuracy on task 1 over epoch 7: 0.5420
+Validation accuracy on task 2 over epoch 7: 0.8532
+Time taken for epoch 7: 43.23s
+
+Combined training loss at step 500: 0.9189 
+Combined training loss at step 1000: 0.7710 
+Training accuracy on task 1 over epoch 8: 0.7118 
+Training accuracy on task 2 over epoch 8: 0.9291 
+Validation accuracy on task 1 over epoch 8: 0.5155
+Validation accuracy on task 2 over epoch 8: 0.8350
+Time taken for epoch 8: 44.98s
+
+Combined training loss at step 500: 1.1056 
+Combined training loss at step 1000: 0.8593 
+Training accuracy on task 1 over epoch 9: 0.7484 
+Training accuracy on task 2 over epoch 9: 0.9419 
+Validation accuracy on task 1 over epoch 9: 0.5226
+Validation accuracy on task 2 over epoch 9: 0.8358
+Time taken for epoch 9: 45.48s
+
+Combined training loss at step 500: 0.8451 
+Combined training loss at step 1000: 0.7011 
+Training accuracy on task 1 over epoch 10: 0.7619 
+Training accuracy on task 2 over epoch 10: 0.9421 
+Validation accuracy on task 1 over epoch 10: 0.5030
+Validation accuracy on task 2 over epoch 10: 0.8470
+Time taken for epoch 10: 45.21s
+
+Combined training loss at step 500: 0.6793 
+Combined training loss at step 1000: 1.0531 
+Training accuracy on task 1 over epoch 11: 0.7872 
+Training accuracy on task 2 over epoch 11: 0.9501 
+Validation accuracy on task 1 over epoch 11: 0.5469
+Validation accuracy on task 2 over epoch 11: 0.8421
+Time taken for epoch 11: 46.27s
+
+Combined training loss at step 500: 1.0163 
+Combined training loss at step 1000: 0.8390 
+Training accuracy on task 1 over epoch 12: 0.8078 
+Training accuracy on task 2 over epoch 12: 0.9532 
+Validation accuracy on task 1 over epoch 12: 0.5240
+Validation accuracy on task 2 over epoch 12: 0.8459
+Time taken for epoch 12: 45.45s
+
+Combined training loss at step 500: 0.8419 
+Combined training loss at step 1000: 0.4189 
+Training accuracy on task 1 over epoch 13: 0.8234 
+Training accuracy on task 2 over epoch 13: 0.9582 
+Validation accuracy on task 1 over epoch 13: 0.5213
+Validation accuracy on task 2 over epoch 13: 0.8415
+Time taken for epoch 13: 51.45s
+
+Combined training loss at step 500: 0.7094 
+Combined training loss at step 1000: 0.6939 
+Training accuracy on task 1 over epoch 14: 0.8346 
+Training accuracy on task 2 over epoch 14: 0.9594 
+Validation accuracy on task 1 over epoch 14: 0.5366
+Validation accuracy on task 2 over epoch 14: 0.8391
+Time taken for epoch 14: 45.15s
+
+Combined training loss at step 500: 0.2956 
+Combined training loss at step 1000: 0.3752 
+Training accuracy on task 1 over epoch 15: 0.8607 
+Training accuracy on task 2 over epoch 15: 0.9622 
+Validation accuracy on task 1 over epoch 15: 0.5153
+Validation accuracy on task 2 over epoch 15: 0.8366
+Time taken for epoch 15: 45.07s
+
+Mean accuracies = [0.49384466 0.8470648 ]
+

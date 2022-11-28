@@ -1,0 +1,568 @@
+DATA:
+  BATCH_SIZE: 8
+  DATA_DIR: /export/home/aneezahm001/nndl_2/adience/adience_age_gender/
+  TARGET_LABEL: age
+LOG_DIR: /export/home/aneezahm001/nndl_2/age_gender/logs/adience/1668094638_age
+LOG_FILE: /export/home/aneezahm001/nndl_2/age_gender/logs/adience/1668094638_age/training.log.tsv
+MODEL:
+  DROPOUT: 0.5
+  INITIALIZER: levi_hassner
+  INPUT_SHAPE: (227, 227, 3)
+  OPTIMIZER:
+    ALPHA: 0.01
+    BETAS: (0.9, 0.999)
+    GAMMA: 0.0005
+    MOMENTUM: 0.0
+    NAME: sgd
+  PRETRAIN_PATH: None
+PREFIX: val1
+RUN_SEED: 1
+TRAIN:
+  CROSS_VALIDATE: True
+  ENABLE: True
+  MAX_EPOCHS: 15
+
+Running on cross-validation fold 1==========MODEL ARCHITECTURE==========
+Model: "levi_hassner_backbone"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Conv1 (Conv2D)               multiple                  14208     
+_________________________________________________________________
+Pool1 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN1 (BatchNormalization)     multiple                  108       
+_________________________________________________________________
+Conv2 (Conv2D)               multiple                  614656    
+_________________________________________________________________
+Pool2 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN2 (BatchNormalization)     multiple                  52        
+_________________________________________________________________
+Conv3 (Conv2D)               multiple                  885120    
+_________________________________________________________________
+BN3 (MaxPooling2D)           multiple                  0         
+_________________________________________________________________
+Flatten1 (Flatten)           multiple                  0         
+_________________________________________________________________
+FC1 (Dense)                  multiple                  7078400   
+_________________________________________________________________
+Dropout1 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC2 (Dense)                  multiple                  262656    
+_________________________________________________________________
+Dropout2 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC3 (Dense)                  multiple                  4104      
+=================================================================
+Total params: 8,859,304
+Trainable params: 8,859,224
+Non-trainable params: 80
+_________________________________________________________________
+
+
+Training model on task age recognition.
+Training loss at step 500: 1.2602 
+Training loss at step 1000: 1.3086 
+Training accuracy over epoch 1: 0.3846 
+Validation accuracy over epoch 1: 0.3453
+Time taken for epoch 1: 45.59s
+
+Training loss at step 500: 1.0577 
+Training loss at step 1000: 1.1679 
+Training accuracy over epoch 2: 0.4784 
+Validation accuracy over epoch 2: 0.3918
+Time taken for epoch 2: 41.86s
+
+Training loss at step 500: 1.1498 
+Training loss at step 1000: 1.3023 
+Training accuracy over epoch 3: 0.5114 
+Validation accuracy over epoch 3: 0.3929
+Time taken for epoch 3: 40.58s
+
+Training loss at step 500: 0.7536 
+Training loss at step 1000: 0.8279 
+Training accuracy over epoch 4: 0.5400 
+Validation accuracy over epoch 4: 0.4137
+Time taken for epoch 4: 38.73s
+
+Training loss at step 500: 0.7712 
+Training loss at step 1000: 0.9128 
+Training accuracy over epoch 5: 0.5707 
+Validation accuracy over epoch 5: 0.4329
+Time taken for epoch 5: 38.51s
+
+Training loss at step 500: 0.5535 
+Training loss at step 1000: 0.7924 
+Training accuracy over epoch 6: 0.6033 
+Validation accuracy over epoch 6: 0.4178
+Time taken for epoch 6: 39.46s
+
+Training loss at step 500: 0.5412 
+Training loss at step 1000: 0.6556 
+Training accuracy over epoch 7: 0.6290 
+Validation accuracy over epoch 7: 0.4726
+Time taken for epoch 7: 41.33s
+
+Training loss at step 500: 0.4835 
+Training loss at step 1000: 0.5980 
+Training accuracy over epoch 8: 0.6681 
+Validation accuracy over epoch 8: 0.4794
+Time taken for epoch 8: 38.92s
+
+Training loss at step 500: 0.3529 
+Training loss at step 1000: 0.4669 
+Training accuracy over epoch 9: 0.7079 
+Validation accuracy over epoch 9: 0.5055
+Time taken for epoch 9: 42.16s
+
+Training loss at step 500: 0.2635 
+Training loss at step 1000: 0.4650 
+Training accuracy over epoch 10: 0.7380 
+Validation accuracy over epoch 10: 0.4575
+Time taken for epoch 10: 38.42s
+
+Training loss at step 500: 0.2489 
+Training loss at step 1000: 0.3980 
+Training accuracy over epoch 11: 0.7773 
+Validation accuracy over epoch 11: 0.5089
+Time taken for epoch 11: 38.85s
+
+Training loss at step 500: 0.4889 
+Training loss at step 1000: 0.5583 
+Training accuracy over epoch 12: 0.8079 
+Validation accuracy over epoch 12: 0.4798
+Time taken for epoch 12: 39.22s
+
+Training loss at step 500: 0.4193 
+Training loss at step 1000: 0.8845 
+Training accuracy over epoch 13: 0.8263 
+Validation accuracy over epoch 13: 0.5198
+Time taken for epoch 13: 38.49s
+
+Training loss at step 500: 0.1794 
+Training loss at step 1000: 0.2201 
+Training accuracy over epoch 14: 0.8496 
+Validation accuracy over epoch 14: 0.4892
+Time taken for epoch 14: 39.76s
+
+Training loss at step 500: 0.2503 
+Training loss at step 1000: 0.1662 
+Training accuracy over epoch 15: 0.8799 
+Validation accuracy over epoch 15: 0.4998
+Time taken for epoch 15: 40.60s
+
+Mean accuracies = [0.4998111]
+
+Running on cross-validation fold 2==========MODEL ARCHITECTURE==========
+Model: "levi_hassner_backbone_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Conv1 (Conv2D)               multiple                  14208     
+_________________________________________________________________
+Pool1 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN1 (BatchNormalization)     multiple                  108       
+_________________________________________________________________
+Conv2 (Conv2D)               multiple                  614656    
+_________________________________________________________________
+Pool2 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN2 (BatchNormalization)     multiple                  52        
+_________________________________________________________________
+Conv3 (Conv2D)               multiple                  885120    
+_________________________________________________________________
+BN3 (MaxPooling2D)           multiple                  0         
+_________________________________________________________________
+Flatten1 (Flatten)           multiple                  0         
+_________________________________________________________________
+FC1 (Dense)                  multiple                  7078400   
+_________________________________________________________________
+Dropout1 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC2 (Dense)                  multiple                  262656    
+_________________________________________________________________
+Dropout2 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC3 (Dense)                  multiple                  4104      
+=================================================================
+Total params: 8,859,304
+Trainable params: 8,859,224
+Non-trainable params: 80
+_________________________________________________________________
+
+
+Training model on task age recognition.
+Training loss at step 500: 1.6442 
+Training loss at step 1000: 1.3699 
+Training accuracy over epoch 1: 0.3847 
+Validation accuracy over epoch 1: 0.4233
+Time taken for epoch 1: 39.82s
+
+Training loss at step 500: 0.9666 
+Training loss at step 1000: 1.3497 
+Training accuracy over epoch 2: 0.4714 
+Validation accuracy over epoch 2: 0.4419
+Time taken for epoch 2: 40.54s
+
+Training loss at step 500: 0.8522 
+Training loss at step 1000: 1.3005 
+Training accuracy over epoch 3: 0.5090 
+Validation accuracy over epoch 3: 0.4356
+Time taken for epoch 3: 39.68s
+
+Training loss at step 500: 0.7587 
+Training loss at step 1000: 0.9947 
+Training accuracy over epoch 4: 0.5461 
+Validation accuracy over epoch 4: 0.4622
+Time taken for epoch 4: 39.75s
+
+Training loss at step 500: 0.6566 
+Training loss at step 1000: 0.9539 
+Training accuracy over epoch 5: 0.5757 
+Validation accuracy over epoch 5: 0.4491
+Time taken for epoch 5: 38.18s
+
+Training loss at step 500: 0.6141 
+Training loss at step 1000: 0.8263 
+Training accuracy over epoch 6: 0.6151 
+Validation accuracy over epoch 6: 0.4516
+Time taken for epoch 6: 38.28s
+
+Training loss at step 500: 0.5870 
+Training loss at step 1000: 0.9205 
+Training accuracy over epoch 7: 0.6477 
+Validation accuracy over epoch 7: 0.4377
+Time taken for epoch 7: 39.13s
+
+Training loss at step 500: 0.5513 
+Training loss at step 1000: 0.6027 
+Training accuracy over epoch 8: 0.6873 
+Validation accuracy over epoch 8: 0.4123
+Time taken for epoch 8: 39.17s
+
+Training loss at step 500: 0.4217 
+Training loss at step 1000: 0.5584 
+Training accuracy over epoch 9: 0.7250 
+Validation accuracy over epoch 9: 0.4335
+Time taken for epoch 9: 39.80s
+
+Val loss has not improved over 5 epochs. Stopping training...
+Mean accuracies = [0.46663558]
+
+Running on cross-validation fold 3==========MODEL ARCHITECTURE==========
+Model: "levi_hassner_backbone_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Conv1 (Conv2D)               multiple                  14208     
+_________________________________________________________________
+Pool1 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN1 (BatchNormalization)     multiple                  108       
+_________________________________________________________________
+Conv2 (Conv2D)               multiple                  614656    
+_________________________________________________________________
+Pool2 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN2 (BatchNormalization)     multiple                  52        
+_________________________________________________________________
+Conv3 (Conv2D)               multiple                  885120    
+_________________________________________________________________
+BN3 (MaxPooling2D)           multiple                  0         
+_________________________________________________________________
+Flatten1 (Flatten)           multiple                  0         
+_________________________________________________________________
+FC1 (Dense)                  multiple                  7078400   
+_________________________________________________________________
+Dropout1 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC2 (Dense)                  multiple                  262656    
+_________________________________________________________________
+Dropout2 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC3 (Dense)                  multiple                  4104      
+=================================================================
+Total params: 8,859,304
+Trainable params: 8,859,224
+Non-trainable params: 80
+_________________________________________________________________
+
+
+Training model on task age recognition.
+Training loss at step 500: 1.7802 
+Training loss at step 1000: 1.8432 
+Training accuracy over epoch 1: 0.3691 
+Validation accuracy over epoch 1: 0.3897
+Time taken for epoch 1: 39.73s
+
+Training loss at step 500: 1.8575 
+Training loss at step 1000: 1.3792 
+Training accuracy over epoch 2: 0.4598 
+Validation accuracy over epoch 2: 0.4459
+Time taken for epoch 2: 39.14s
+
+Training loss at step 500: 1.1727 
+Training loss at step 1000: 1.0558 
+Training accuracy over epoch 3: 0.4993 
+Validation accuracy over epoch 3: 0.4486
+Time taken for epoch 3: 39.14s
+
+Training loss at step 500: 1.1161 
+Training loss at step 1000: 1.0233 
+Training accuracy over epoch 4: 0.5365 
+Validation accuracy over epoch 4: 0.4476
+Time taken for epoch 4: 39.31s
+
+Training loss at step 500: 1.0524 
+Training loss at step 1000: 0.9410 
+Training accuracy over epoch 5: 0.5743 
+Validation accuracy over epoch 5: 0.4637
+Time taken for epoch 5: 40.10s
+
+Training loss at step 500: 0.6446 
+Training loss at step 1000: 0.7747 
+Training accuracy over epoch 6: 0.6138 
+Validation accuracy over epoch 6: 0.4571
+Time taken for epoch 6: 38.91s
+
+Training loss at step 500: 0.6814 
+Training loss at step 1000: 0.6745 
+Training accuracy over epoch 7: 0.6501 
+Validation accuracy over epoch 7: 0.4568
+Time taken for epoch 7: 38.61s
+
+Training loss at step 500: 0.7759 
+Training loss at step 1000: 0.9526 
+Training accuracy over epoch 8: 0.6828 
+Validation accuracy over epoch 8: 0.4256
+Time taken for epoch 8: 40.56s
+
+Training loss at step 500: 0.7873 
+Training loss at step 1000: 0.5216 
+Training accuracy over epoch 9: 0.7189 
+Validation accuracy over epoch 9: 0.4344
+Time taken for epoch 9: 40.08s
+
+Training loss at step 500: 0.3724 
+Training loss at step 1000: 0.4975 
+Training accuracy over epoch 10: 0.7604 
+Validation accuracy over epoch 10: 0.4174
+Time taken for epoch 10: 39.14s
+
+Val loss has not improved over 5 epochs. Stopping training...
+Mean accuracies = [0.45020747]
+
+Running on cross-validation fold 4==========MODEL ARCHITECTURE==========
+Model: "levi_hassner_backbone_3"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Conv1 (Conv2D)               multiple                  14208     
+_________________________________________________________________
+Pool1 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN1 (BatchNormalization)     multiple                  108       
+_________________________________________________________________
+Conv2 (Conv2D)               multiple                  614656    
+_________________________________________________________________
+Pool2 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN2 (BatchNormalization)     multiple                  52        
+_________________________________________________________________
+Conv3 (Conv2D)               multiple                  885120    
+_________________________________________________________________
+BN3 (MaxPooling2D)           multiple                  0         
+_________________________________________________________________
+Flatten1 (Flatten)           multiple                  0         
+_________________________________________________________________
+FC1 (Dense)                  multiple                  7078400   
+_________________________________________________________________
+Dropout1 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC2 (Dense)                  multiple                  262656    
+_________________________________________________________________
+Dropout2 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC3 (Dense)                  multiple                  4104      
+=================================================================
+Total params: 8,859,304
+Trainable params: 8,859,224
+Non-trainable params: 80
+_________________________________________________________________
+
+
+Training model on task age recognition.
+Training loss at step 500: 1.4533 
+Training loss at step 1000: 0.9435 
+Training accuracy over epoch 1: 0.4059 
+Validation accuracy over epoch 1: 0.2635
+Time taken for epoch 1: 41.06s
+
+Training loss at step 500: 1.1149 
+Training loss at step 1000: 0.6760 
+Training accuracy over epoch 2: 0.4852 
+Validation accuracy over epoch 2: 0.3593
+Time taken for epoch 2: 38.52s
+
+Training loss at step 500: 1.1485 
+Training loss at step 1000: 0.5965 
+Training accuracy over epoch 3: 0.5198 
+Validation accuracy over epoch 3: 0.2884
+Time taken for epoch 3: 39.06s
+
+Training loss at step 500: 0.9405 
+Training loss at step 1000: 0.5221 
+Training accuracy over epoch 4: 0.5598 
+Validation accuracy over epoch 4: 0.3896
+Time taken for epoch 4: 38.73s
+
+Training loss at step 500: 0.8598 
+Training loss at step 1000: 0.4084 
+Training accuracy over epoch 5: 0.5964 
+Validation accuracy over epoch 5: 0.4232
+Time taken for epoch 5: 39.71s
+
+Training loss at step 500: 0.8508 
+Training loss at step 1000: 0.3462 
+Training accuracy over epoch 6: 0.6330 
+Validation accuracy over epoch 6: 0.4071
+Time taken for epoch 6: 41.22s
+
+Training loss at step 500: 1.1099 
+Training loss at step 1000: 0.3374 
+Training accuracy over epoch 7: 0.6754 
+Validation accuracy over epoch 7: 0.4141
+Time taken for epoch 7: 38.98s
+
+Training loss at step 500: 0.6548 
+Training loss at step 1000: 0.3142 
+Training accuracy over epoch 8: 0.7103 
+Validation accuracy over epoch 8: 0.4378
+Time taken for epoch 8: 38.52s
+
+Training loss at step 500: 0.4903 
+Training loss at step 1000: 0.2385 
+Training accuracy over epoch 9: 0.7519 
+Validation accuracy over epoch 9: 0.4373
+Time taken for epoch 9: 41.26s
+
+Training loss at step 500: 0.4284 
+Training loss at step 1000: 0.3395 
+Training accuracy over epoch 10: 0.7797 
+Validation accuracy over epoch 10: 0.4332
+Time taken for epoch 10: 38.87s
+
+Training loss at step 500: 0.5569 
+Training loss at step 1000: 0.2797 
+Training accuracy over epoch 11: 0.8099 
+Validation accuracy over epoch 11: 0.4357
+Time taken for epoch 11: 38.53s
+
+Training loss at step 500: 0.0541 
+Training loss at step 1000: 0.2535 
+Training accuracy over epoch 12: 0.8401 
+Validation accuracy over epoch 12: 0.4062
+Time taken for epoch 12: 38.80s
+
+Training loss at step 500: 0.0677 
+Training loss at step 1000: 0.1178 
+Training accuracy over epoch 13: 0.8680 
+Validation accuracy over epoch 13: 0.4336
+Time taken for epoch 13: 38.02s
+
+Val loss has not improved over 5 epochs. Stopping training...
+Mean accuracies = [0.4460581]
+
+Running on cross-validation fold 5==========MODEL ARCHITECTURE==========
+Model: "levi_hassner_backbone_4"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Conv1 (Conv2D)               multiple                  14208     
+_________________________________________________________________
+Pool1 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN1 (BatchNormalization)     multiple                  108       
+_________________________________________________________________
+Conv2 (Conv2D)               multiple                  614656    
+_________________________________________________________________
+Pool2 (MaxPooling2D)         multiple                  0         
+_________________________________________________________________
+BN2 (BatchNormalization)     multiple                  52        
+_________________________________________________________________
+Conv3 (Conv2D)               multiple                  885120    
+_________________________________________________________________
+BN3 (MaxPooling2D)           multiple                  0         
+_________________________________________________________________
+Flatten1 (Flatten)           multiple                  0         
+_________________________________________________________________
+FC1 (Dense)                  multiple                  7078400   
+_________________________________________________________________
+Dropout1 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC2 (Dense)                  multiple                  262656    
+_________________________________________________________________
+Dropout2 (Dropout)           multiple                  0         
+_________________________________________________________________
+FC3 (Dense)                  multiple                  4104      
+=================================================================
+Total params: 8,859,304
+Trainable params: 8,859,224
+Non-trainable params: 80
+_________________________________________________________________
+
+
+Training model on task age recognition.
+Training loss at step 500: 1.7454 
+Training loss at step 1000: 1.2693 
+Training accuracy over epoch 1: 0.3371 
+Validation accuracy over epoch 1: 0.4741
+Time taken for epoch 1: 39.02s
+
+Training loss at step 500: 1.6215 
+Training loss at step 1000: 1.0514 
+Training accuracy over epoch 2: 0.4363 
+Validation accuracy over epoch 2: 0.4834
+Time taken for epoch 2: 38.92s
+
+Training loss at step 500: 1.4535 
+Training loss at step 1000: 1.1322 
+Training accuracy over epoch 3: 0.4771 
+Validation accuracy over epoch 3: 0.4858
+Time taken for epoch 3: 37.26s
+
+Training loss at step 500: 1.2817 
+Training loss at step 1000: 0.8289 
+Training accuracy over epoch 4: 0.5224 
+Validation accuracy over epoch 4: 0.4528
+Time taken for epoch 4: 40.19s
+
+Training loss at step 500: 1.4401 
+Training loss at step 1000: 0.7828 
+Training accuracy over epoch 5: 0.5568 
+Validation accuracy over epoch 5: 0.4594
+Time taken for epoch 5: 39.53s
+
+Training loss at step 500: 0.8828 
+Training loss at step 1000: 0.9927 
+Training accuracy over epoch 6: 0.6021 
+Validation accuracy over epoch 6: 0.4337
+Time taken for epoch 6: 38.08s
+
+Training loss at step 500: 0.9574 
+Training loss at step 1000: 0.6558 
+Training accuracy over epoch 7: 0.6409 
+Validation accuracy over epoch 7: 0.4836
+Time taken for epoch 7: 38.13s
+
+Training loss at step 500: 1.0315 
+Training loss at step 1000: 0.7304 
+Training accuracy over epoch 8: 0.6715 
+Validation accuracy over epoch 8: 0.4525
+Time taken for epoch 8: 42.23s
+
+Val loss has not improved over 5 epochs. Stopping training...
+Mean accuracies = [0.44735384]
+
