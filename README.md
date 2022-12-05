@@ -2,11 +2,17 @@
 I compare the performance of the single-task learning and multi-task learning method for the task of Age and Gender Prediction by inheriting and improving the Levi-Hassner model. The models are evaluated on the Adience dataset.
 
 ## Index
-* [Overview](#Overview)
+* [Multi-Task Learning](#Multi-Task-Learning)
+* [Repository Overview](#Overview)
 * [Dependencies and Environment](#Dependencies-and-Environment)
 * [Datasets and Preparation](#Datasets-and-Preparation)
 * [Running the Model](#Running-the-Model)
+* [Results](#Results)
 * [Visualizing the Results](#Visualizing-the-Results)
+* [References](#References)
+
+## Multi Task Learning
+We implement a multi-task approach in our network architecture. It helps to gather information from the training signals of related tasks. In our context, it refers to the age and gender estimation.
 
 ## Overview
 This folder contains the model and associated python files to perform age and gender classification on the Adience benchmark dataset. The code is implemented using Python 3.8 and the models are implemented using TensorFlow 2.3. 
