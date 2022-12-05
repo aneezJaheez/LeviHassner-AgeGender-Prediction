@@ -94,4 +94,20 @@ tensorboard --logdir=./age_gender/logs/adience/1668091466_gender
 ```
 
 ## References
+[1] G. Levi and T. Hassner, “Age and gender classification using convolutional neural networks”. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR) workshops, 2015.
 
+[2] S. Ruder. “An Overview of Multi-Task Learning in Deep Neural Networks”. 2017. https://ruder.io/multi-task/index.html
+
+[3] S. Lapuschkin, A. Binder, K. Muller, W. Samek, “Understanding and Comparing Deep Neural Networks for Age and Gender Classification”. Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2017, pp. 1629-1638
+
+[4] W.-L. Chao, J.-Z. Liu, and J.-J. Ding. “Facial age estimation based on label-sensitive learning and age-oriented regression”. In Pattern Recognition, 46(3):628–641, 2013.
+
+[5] Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, and L. D. Jackel. “Backpropagation applied to handwritten zip code recognition”. In Neural computation, 1(4):541–551, 1989.
+
+[6] E. Eidinger, R. Enbar, and T. Hassner. “Age and Gender Estimation of Unfiltered Faces”. 2014. In Transactions on Information Forensics and Security (IEEE-TIFS), special issue on Facial Biometrics in the Wild, 9(12): 2170 - 2179.
+
+[7] Z. Liu, P. Luo, X. Wang, and X. Tang. “Deep learning face attributes in the wild”. 2014. In Proceedings of the IEEE international conference on computer vision (pp. 3730-3738).
+
+[8] M. F. Mustapha, et al. “Age Group Classification using Convolutional Neural Network (CNN)”. 2021. In J. Phys.: Conf. Ser. 2084 012028
+
+[9] T. Hassner, S. Harel, E. Paz, and R. Enbar. “Effective face frontalization in unconstrained images”. Proc. Conf. Comput. Vision Pattern Recognition, 2015. 5, 6
