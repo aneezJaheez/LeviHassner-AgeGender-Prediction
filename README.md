@@ -56,7 +56,7 @@ The configurations listed on the command line in the above manner take precenden
 
 ## Results
 
-| Classification | Benchmark | Best from 1 | Best from 6 |
+| Classification | Benchmark | Best from [1] | Best from [6] |
 | --- | --- | --- | --- |
 | Age | 0.480 ± 0.0085 | 0.495 ± 0.44 | 0.451 ± 0.26 |
 | Gender | 0.828 ± 0.0054 | 0.859 ± 0.14 | 0.778 ± 0.13 |
