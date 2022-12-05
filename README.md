@@ -12,10 +12,12 @@ I compare the performance of the single-task learning and multi-task learning me
 * [References](#References)
 
 ## Multi Task Learning
-We implement a multi-task approach in our network architecture. It helps to gather information from the training signals of related tasks. In our context, it refers to the age and gender estimation.
+We implement a multi-task approach in our network architecture. It helps to gather information from the training signals of related tasks. In our context, it refers to the age and gender estimation. For our experiments, we mainly inherit the Levi-Hassner CNN Model, designed by [1], as the backbone of our model. We implement the multi-task learning approach and add our own head which outputs both the age and gender of the image.
 
 ## Overview
 This folder contains the model and associated python files to perform age and gender classification on the Adience benchmark dataset. The code is implemented using Python 3.8 and the models are implemented using TensorFlow 2.3. 
+
+The first experiment is the base experiment, where we trained the multi-task model on the Adience dataset without pre-training and evaluated its accuracy, we will be using this model for basic comparisons. For the second experiment, we pretrained the model using the CelebA dataset before training it with the Adience dataset. For the last experiment, we created two individual models using the Levi-Hassner backbone but each with a head that only outputs the gender or age. These two models were individually trained on the Adience dataset. The results of the last 2 experiments will be compared with the results of the first experiment.
 
 ## Dependencies and Environment
 
@@ -51,6 +53,13 @@ python run.py DATA.TARGET_LABEL both DATA.BATCH_SIZE 50 MODEL.OPTIMIZER.NAME ada
 ```
 
 The configurations listed on the command line in the above manner take precendence over the configurations in the main configurations file.
+
+## Results
+
+| Classification | Multi-Task Model | Best from 1 | Best from 6 |
+| --- | --- | --- | --- |
+| Age | 0.480 ± 0.0085 | 0.495 ± 0.44 | 0.451 ± 0.26 |
+| Gender | 0.828 ± 0.0054 | 0.859 ± 0.14 | 0.778 ± 0.13 |
 
 ## Visualizing the Results
 On every run, the results are logged in the directory "./age_gender/logs". The logs contain the output over the entire training run in the "training.log.tsv" file which can be viewed as a txt file. The logs also contain tensorboard visualizations of the training dataset, validation dataset, and training and validation accuracies and losses over each cross-validation fold in the dataset. These logs can be visualized using tensorboard. For instance, to view the training logs for the task of age and gender recognition, use the following command from the project directory:
