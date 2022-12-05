@@ -84,3 +84,7 @@ Similarly, to view the training visualizations for the task of gender classifica
 ```
 tensorboard --logdir=./age_gender/logs/adience/1668091466_gender
 ```
+
+## References
+
+
