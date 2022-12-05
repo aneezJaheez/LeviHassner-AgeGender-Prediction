@@ -5,7 +5,7 @@ I compare the performance of the single-task learning and multi-task learning me
 * [Overview](#Overview)
 * [Dependencies and Environment](#Dependencies-and-Environment)
 * [Datasets and Preparation](#Datasets-and-Preparation)
-* [Running the Attack](#Running-the-Attack)
+* [Running the Model](#Running-the-Model)
 * [Visualizing the Results](#Visualizing-the-Results)
 
 ## Overview
@@ -30,7 +30,7 @@ python ./data/preproc.py --fold_dir ./adience/adience_age_gender/foldstrain_val_
 
 The adience data_dir and fold_dir can be downloaded here: http://www.openu.ac.il/home/hassner/Adience/data.html
 
-## Running the Repository
+## Running the Model
 
 After installing the required dependencies and preparing the datasets for training the shadow models according to the recipe highlighted in the paper, the training can be run from the project directory of the via the command 
 
