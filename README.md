@@ -62,23 +62,22 @@ The configurations listed on the command line in the above manner take precenden
 | Gender | 0.828 ± 0.0054 | 0.859 ± 0.14 | 0.778 ± 0.13 |
 
 Table 1: Our benchmark compared to the best from [1] and [6].
-Listed are the mean accuracy ± standard error of the first experiment.
 
 
 | Classification | Pre-Trained Model | Benchmark |
 | --- | --- | --- |
 | Age | 0.496 ± 0.012 | 0.480 ± 0.0085 |
 | Gender | 0.846 ± 0.0076 | 0.828 ± 0.0054 |
+
 Table 2: Age and Gender results against the benchmark.
-Listed are the mean accuracy ± standard error of the second experiment.
 
 
 | Classification | Benchmark | Single-Task Model |
 | --- | --- | --- |
 | Age | 0.455 ± 0.0093 | 0.480 ± 0.0085 |
 | Gender | 0.814 ± 0.0075 | 0.828 ± 0.0054 |
+
 Table 3: Age and Gender results against the benchmark.
-Listed are the mean accuracy ± standard error of the third experiment.
 
 ## Visualizing the Results
 On every run, the results are logged in the directory "./age_gender/logs". The logs contain the output over the entire training run in the "training.log.tsv" file which can be viewed as a txt file. The logs also contain tensorboard visualizations of the training dataset, validation dataset, and training and validation accuracies and losses over each cross-validation fold in the dataset. These logs can be visualized using tensorboard. For instance, to view the training logs for the task of age and gender recognition, use the following command from the project directory:
