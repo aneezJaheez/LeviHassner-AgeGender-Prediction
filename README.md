@@ -56,7 +56,7 @@ The configurations listed on the command line in the above manner take precenden
 
 ## Results
 
-| Classification | Benchmark | Best from [1] | Best from [6] |
+| Classification | Multi-Task Benchmark | Best from [1] | Best from [6] |
 | --- | --- | --- | --- |
 | Age | 0.480 ± 0.0085 | 0.495 ± 0.44 | 0.451 ± 0.26 |
 | Gender | 0.828 ± 0.0054 | 0.859 ± 0.14 | 0.778 ± 0.13 |
@@ -64,7 +64,7 @@ The configurations listed on the command line in the above manner take precenden
 Table 1: Our benchmark compared to the best from [1] and [6].
 
 
-| Classification | Pre-Trained Model | Benchmark |
+| Classification | Pre-Trained Model | Multi-Task Benchmark |
 | --- | --- | --- |
 | Age | 0.496 ± 0.012 | 0.480 ± 0.0085 |
 | Gender | 0.846 ± 0.0076 | 0.828 ± 0.0054 |
@@ -72,7 +72,7 @@ Table 1: Our benchmark compared to the best from [1] and [6].
 Table 2: Age and Gender results against the benchmark.
 
 
-| Classification | Benchmark | Single-Task Model |
+| Classification | Multi-Task Benchmark | Single-Task Model |
 | --- | --- | --- |
 | Age | 0.455 ± 0.0093 | 0.480 ± 0.0085 |
 | Gender | 0.814 ± 0.0075 | 0.828 ± 0.0054 |
