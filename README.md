@@ -15,6 +15,7 @@ I compare the performance of the single-task learning and multi-task learning me
 We implement a multi-task approach in our network architecture. It helps to gather information from the training signals of related tasks. In our context, it refers to the age and gender estimation. For our experiments, we mainly inherit the Levi-Hassner CNN Model, designed by [1], as the backbone of our model. We implement the multi-task learning approach and add our own head to the backbone which outputs both the age and gender of the image.
 
 ![Multi-Task Levi-Hassner Architecture](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Architecture.png)
+![Multi-Task General Model](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Multi-Task.png)
 
 ## Overview
 This repository contains the model and associated python files to perform age and gender classification on the Adience benchmark dataset. The code is implemented using Python 3.8 and the models are implemented using TensorFlow 2.3. 
@@ -37,6 +38,10 @@ To prepare the dataset, first you will need to preprocess the data using preproc
 ```
 python ./data/preproc.py --fold_dir ./adience/adience_age_gender/foldstrain_val_txt_files_per_fold/test_fold_is_0 --data_dir ./adience/aligned --output_dir ./adience/adience_age_gender/test_fold_is_0
 ```
+
+Some samples from the prepared dataset are shown here:
+
+![Training images - Adience](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Dataset.png)
 
 The adience data_dir and fold_dir can be downloaded here: http://www.openu.ac.il/home/hassner/Adience/data.html
 
@@ -89,11 +94,16 @@ On every run, the results are logged in the directory "./age_gender/logs". The l
 tensorboard --logdir=./age_gender/logs/adience/1668097217_both
 ```
 
+![Accuracy Multi-Task – Age](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Age_Multi-task.png)
+![Accuracy Multi-Task – Gender](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Gender_Multi-task.png)
+
 Similarly, to view the training visualizations for the task of gender classification:
 
 ```
 tensorboard --logdir=./age_gender/logs/adience/1668091466_gender
 ```
+
+![Accuracy Single-Task – Gender](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Gender_Single-task.png)
 
 ## References
 [1] G. Levi and T. Hassner, “Age and gender classification using convolutional neural networks”. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR) workshops, 2015.
