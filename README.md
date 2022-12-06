@@ -14,6 +14,8 @@ I compare the performance of the single-task learning and multi-task learning me
 ## Multi Task Learning
 We implement a multi-task approach in our network architecture. It helps to gather information from the training signals of related tasks. In our context, it refers to the age and gender estimation. For our experiments, we mainly inherit the Levi-Hassner CNN Model, designed by [1], as the backbone of our model. We implement the multi-task learning approach and add our own head to the backbone which outputs both the age and gender of the image.
 
+The architecture of the multi-task model and the general structure of multi-task learning is shown below.
+
 ![Multi-Task Levi-Hassner Architecture](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Architecture.png)
 ![Multi-Task General Model](https://github.com/aneezJaheez/LeviHassner-AgeGender-Prediction/blob/main/img/Multi-Task.png)
 
